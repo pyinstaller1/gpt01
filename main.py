@@ -8,7 +8,7 @@ chat_model = ChatOpenAI(openai_api_key="sk-4ICnz1kAd7mrFpj8VqrtT3BlbkFJftqEnnwwE
 
 st.title('건강보험 GPT')
 
-content = st.text_input('오픈AI의 GPT4.0 LLM 기반 챗봇')
+content = st.text_input('GPT 3.5 LLM 기반 챗봇... 질문하기 버튼을 누르세요.')
 
 if st.button('질문하기'):
     with st.spinner('답변 작성 중...'):
