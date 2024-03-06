@@ -6,13 +6,13 @@ import streamlit as st
 chat_model = ChatOpenAI(openai_api_key="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")
 
 
-st.title('인공지능 시인')
+st.title('건강보험 GPT')
 
-content = st.text_input('시의 주제를 제시해주세요.')
+content = st.text_input('오픈AI의 GPT4.0 LLM 기반 챗봇')
 
-if st.button('시 작성 요청하기'):
-    with st.spinner('시 작성 중...'):
-        result = chat_model.predict(content + "에 대해 시를 써줘")
+if st.button('질문하기'):
+    with st.spinner('답변 작성 중...'):
+        result = chat_model.predict(content)
         st.write(result)
 
 
