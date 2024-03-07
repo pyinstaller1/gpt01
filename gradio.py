@@ -1,43 +1,21 @@
-# import openai
 import gradio as gr
-
 from langchain.chat_models import ChatOpenAI
+from langchain.schema import AIMessage, HumanMessage, SystemMessage
 
 
 
 chat_model = ChatOpenAI(openai_api_key="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")
-
-result = chat_model.predict("hi")
-print(result)
-
-print(8)
+# result = chat_model([HumanMessage(content="안녕? 넌 누구니?")])
 
 
-
-
-
-
-
-# client = openai.OpenAI(api_key="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")
 
 def respond(message, chat_history):
 
-  # client = openai.OpenAI(api_key="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")
+  result = chat_model([HumanMessage(content=message)])
+  
+  bot_message = result.content
+  # bot_message = chat_model.predict(message)
 
-  """
-  response = client.chat.completions.create(
-      model="gpt-3.5-turbo",
-      messages = [{"role": "user", "content": message}],
-      max_tokens=256,
-      temperature=0
-  )
-
-  print(response.choices)
-  print(response.choices[0].message.content)
-  """
-
-  # bot_message = response.choices[0].message.content
-  bot_message = chat_model.predict(message)
   chat_history.append((message, bot_message))
 
   return "", chat_history
@@ -51,6 +29,4 @@ with gr.Blocks() as demo:
   clear.click(lambda: None, None, chatbot, queue=False)
 
 demo.launch(debug=True)
-
-print(8)
 
