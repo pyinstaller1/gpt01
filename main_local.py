@@ -1,5 +1,31 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
+
+"""
+import os
+import streamlit as st
+
+# 현재 스크립트 파일의 디렉토리 경로를 얻기
+current_dir = os.path.dirname(os.path.realpath(__file__))
+cache_dir = os.path.join(current_dir, 'model_cache')  # 'model_cache' 폴더를 캐시 디렉토리로 사용
+
+print(current_dir)
+print(cache_dir)
+
+model_name = "skt/kogpt2-base-v2"  # 예시 모델 이름, 사용 가능한 최신 모델로 변경 가능
+
+@st.cache_data
+def load_model_and_tokenizer(model_name, cache_dir):
+    model = GPT2LMHeadModel.from_pretrained(model_name, cache_dir=cache_dir)
+    tokenizer = PreTrainedTokenizerFast.from_pretrained(model_name, cache_dir=cache_dir)
+    return model, tokenizer
+"""
+
+
+
+
+
+
 # 저장된 모델 경로 설정
 model_path = "D:/Project/gemma2b/models--beomi--gemma-ko-7b/snapshots/9c24b9c4ab362ca141e8dc1c8fb9cb124c1a136e"
 
