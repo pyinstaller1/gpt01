@@ -43,7 +43,7 @@ def main():
     openai_api_key = "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"
 
     with st.sidebar:
-        uploaded_files = st.file_uploader("건강보험 관련 PDF 자료를 여기에 첨부하세요.", type=['pdf', 'docx'], accept_multiple_files=True)
+        uploaded_files = st.file_uploader("PDF 자료를 여기에 첨부하세요.", type=['pdf', 'docx'], accept_multiple_files=True)
         # openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
         process = st.button("첨부된 파일 등록")
 
@@ -86,7 +86,7 @@ def main():
 
     if 'messages' not in st.session_state:
         st.session_state['messages'] = [{"role": "assistant",
-                                         "content": "건강보험에 대해서 질문하시면 답변 드리겠습니다."}]
+                                         "content": "질문하시면 친절하게 답변 드리겠습니다."}]
 
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
@@ -97,18 +97,6 @@ def main():
     # Chat logic
     if query := st.chat_input("질문을 입력해주세요."):
         st.session_state.messages.append({"role": "user", "content": query})
-
-        """
-        if len(uploaded_files) == 0:
-            st.info("PDF 파일을 먼저 첨부하세요.")
-            st.stop()
-
-        if len(uploaded_files) == 0 and process_check == False:
-            st.info(str(len(uploaded_files)))
-            st.info(process_check)
-            st.info("첨부된 파일 등록 버튼을 누르세요.")
-            st.stop()
-        """
 
         with st.chat_message("user"):
             st.markdown(query)
