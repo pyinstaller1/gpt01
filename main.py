@@ -6,7 +6,7 @@ import streamlit as st
 chat_model = ChatOpenAI(openai_api_key="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")
 
 
-st.title('건강보험 GPT')
+st.title('GPT 3.5 연동 챗봇')
 
 content = st.text_input('GPT 3.5 LLM 기반 챗봇... 질문하기 버튼을 누르세요.')
 
