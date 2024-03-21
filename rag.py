@@ -28,7 +28,7 @@ def main():
     st.title(":red[NHIS]&nbsp;_챗봇_  &nbsp;&nbsp;&nbsp; :robot_face:")
     st.text("GPT 3.5를 랭체인으로 연결해서 RAG 구현 (PDF, DOCX)")
     st.text("PDF 나 DOCX 파일 중 1개 이상 등록해야 작동")
-    st.text("유튜브 보고 만들었음(Streamlit으로 RAG 시스템 구축하기")
+    st.text("유튜브 보고 만들었음 (Streamlit으로 RAG 시스템 구축하기)")
 
     if "conversation" not in st.session_state:
         st.session_state.conversation = None
@@ -49,22 +49,9 @@ def main():
     process_check = False
     if process:
 
+        files_text = get_text(uploaded_files)
+
         st.info("파일 내용을 작은 Text 청크들로 쪼개고 있습니다...")
-
-        """
-        if uploaded_files is not None and len(uploaded_files) > 0:
-            files_text = get_text(uploaded_files)
-            local_documents = process_local_file("건강보험자료.pdf")
-            files_text.extend(local_documents)
-
-        else:
-            files_text = process_local_file("건강보험자료.pdf")
-            st.text(8)
-            st.text(files_text)
-        """
-
-
-
 
 
         if 1== 1:
