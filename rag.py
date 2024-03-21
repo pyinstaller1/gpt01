@@ -27,6 +27,8 @@ def main():
 
     st.title(":red[NHIS]&nbsp;_챗봇_  &nbsp;&nbsp;&nbsp; :robot_face:")
     st.text("GPT 3.5를 랭체인으로 연결해서 RAG 구현 (PDF, DOCX)")
+    st.text("PDF 나 DOCX 파일 중 1개 이상 등록해야 작동")
+
 
 
     if "conversation" not in st.session_state:
@@ -64,7 +66,6 @@ def main():
             files_text = process_local_file("건강보험자료.pdf")
             st.text(8)
             st.text(files_text)
-
 
 
 
