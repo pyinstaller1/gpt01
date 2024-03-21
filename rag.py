@@ -27,7 +27,7 @@ def main():
 
     st.title(":red[NHIS]&nbsp;_챗봇_  &nbsp;&nbsp;&nbsp; :robot_face:")
     st.text("GPT 3.5를 랭체인으로 연결해서 RAG 구현 (PDF, DOCX)")
-    st.text("PDF 나 DOCX 파일 중 1개 이상 등록해야 작동 (유튜브 보고 만들었음)")
+    st.text("PDF 나 DOCX 파일 중 1개 이상 등록해야 작동 (<a href='https://www.youtube.com/watch?v=xYNYNKJVa4E&t=1717s&ab_channel=%EB%AA%A8%EB%91%90%EC%9D%98AI'>유튜브</a> 보고 만들었음)")
     st.text("https://www.youtube.com/watch?v=xYNYNKJVa4E&t=1717s&ab_channel=%EB%AA%A8%EB%91%90%EC%9D%98AI")
 
 
