@@ -39,7 +39,7 @@ def main():
     if "processComplete" not in st.session_state:
         st.session_state.processComplete = None
 
-    openai_api_key = "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"
+    openai_api_key = "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"
 
     with st.sidebar:
         uploaded_files = st.file_uploader("PDF 자료를 여기에 첨부하세요.", type=['pdf', 'docx'], accept_multiple_files=True)
