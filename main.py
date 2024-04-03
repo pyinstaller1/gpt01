@@ -3,7 +3,7 @@ from langchain.chat_models import ChatOpenAI
 import streamlit as st
 
 
-chat_model = ChatOpenAI(openai_api_key="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")
+chat_model = ChatOpenAI()
 
 
 st.title('GPT 3.5 연동 챗봇')
