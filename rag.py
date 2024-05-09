@@ -26,9 +26,8 @@ def main():
         page_icon=":robot_face:")
 
     st.title(":red[NHIS]&nbsp;_챗봇_  &nbsp;&nbsp;&nbsp; :robot_face:")
-    st.text("GPT 3.5를 랭체인으로 연결해서 RAG 구현 (PDF, DOCX)")
-    st.text("PDF 나 DOCX 파일 중 1개 이상 등록해야 작동")
-    st.text("유튜브 보고 만들었음 (Streamlit으로 RAG 시스템 구축하기)")
+    st.text("PDF 파일 1개 이상 등록되면 RAG 답변, 0개면 챗GPT 3.5가 답변")
+    st.text("유튜브 보고 만들었음 (동영상 제목: Streamlit으로 RAG 시스템 구축하기)")
 
     if "conversation" not in st.session_state:
         st.session_state.conversation = None
@@ -39,7 +38,7 @@ def main():
     if "processComplete" not in st.session_state:
         st.session_state.processComplete = None
 
-    openai_api_key = "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"
+    openai_api_key = "sk-proj-Rn1BX0jmY2iUI0w274xIT3BlbkFJQSag8gRmZsghhW9ARyMs"
 
     with st.sidebar:
         uploaded_files = st.file_uploader("PDF 자료를 여기에 첨부하세요.", type=['pdf', 'docx'], accept_multiple_files=True)
