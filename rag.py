@@ -26,7 +26,6 @@ def main():
         page_icon=":robot_face:")
 
     st.title(":red[NHIS]&nbsp;_챗봇_  &nbsp;&nbsp;&nbsp; :robot_face:")
-    st.text("PDF 파일 1개 이상 등록되면 RAG 답변, 0개면 챗GPT 3.5가 답변")
     st.text("유튜브 보고 만들었음 (동영상 제목: Streamlit으로 RAG 시스템 구축하기)")
 
     if "conversation" not in st.session_state:
